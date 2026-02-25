@@ -1,0 +1,24 @@
+<header
+  class="flex-row top-0 z-50 w-full bg-primary border-b-2 border-primary-foreground/30 items-center justify-between backdrop-blur-md h-16 flex text-primary-foreground"
+>
+  <div class="flex flex-row p-10 gap-10 items-center">
+    <h1>Valéria Lima</h1>
+    <button
+      app-button
+      variant="outline"
+      size="icon"
+      (click)="themeService.toggleTheme()"
+    >
+      <lucide-icon [img]="themeService.darkmode() ? Moon : Sun"></lucide-icon>
+    </button>
+  </div>
+
+  <nav class="justify-items-end p-10">
+    <ul class=" flex-row flex gap-5 ">
+      <li><a href="" app-button variant="ghost">Sobre</a></li>
+      <li><a href="" app-button variant="ghost">Abordagem</a></li>
+      <li><a href="" app-button variant="ghost">Contato</a></li>
+      <li><a href="" app-button variant="ghost">Agendar</a></li>
+    </ul>
+  </nav>
+</header>
