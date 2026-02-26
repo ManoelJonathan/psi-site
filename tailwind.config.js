@@ -4,6 +4,10 @@ module.exports = {
   content: ["./src/**/*.{html,ts}"],
   theme: {
     extend: {
+      fontFamily:{
+        sans:['Inter','sans-serif'],
+        serif: ['"Playfair Display"', 'serif']
+      },
       colors: {
         border: "color-mix(in srgb, var(--border) calc(100% * <alpha-value>), transparent)",
         input: "color-mix(in srgb, var(--input) calc(100% * <alpha-value>), transparent)",
