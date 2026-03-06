@@ -13,18 +13,18 @@
       <a href="#agendar" app-button variant="outline">Agendar</a>
 
       <button app-button variant="ghost" size="icon" (click)="themeService.toggleTheme()">
-        <lucide-icon [img]="themeService.darkmode() ? Moon : Sun" class="h-[1.2rem] w-[1.2rem]"></lucide-icon>
+        <hlm-icon [name]="themeService.darkmode() ? 'lucideMoon' : 'lucideSun'" class="h-[1.2rem] w-[1.2rem]"></hlm-icon>
       </button>
     </nav>
 
 
     <div class="flex items-center gap-1 md:hidden">
       <button app-button variant="ghost" size="icon" (click)="themeService.toggleTheme()">
-        <lucide-icon [img]="themeService.darkmode() ? Moon : Sun" class="h-[1.2rem] w-[1.2rem]"></lucide-icon>
+        <hlm-icon [name]="themeService.darkmode() ? 'lucideMoon' : 'lucideSun'" class="h-[1.2rem] w-[1.2rem]"></hlm-icon>
       </button>
 
       <button app-button variant="ghost" size="icon" (click)="toggleMenu()">
-        <lucide-icon [img]="isMobileMenuOpen() ? CloseIcon : MenuIcon" class="h-[1.2rem] w-[1.2rem]"></lucide-icon>
+        <hlm-icon [name]="isMobileMenuOpen() ? 'lucideX' : 'lucideMenu'" class="h-[1.2rem] w-[1.2rem]"></hlm-icon>
       </button>
     </div>
   </div>

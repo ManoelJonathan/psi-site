@@ -17,35 +17,17 @@
     "target": "ES2022",
     "module": "ES2022",
     "paths": {
-      "@app/*": [
-        "src/app/*"
-      ],
-      "@core/*": [
-        "src/app/core/*"
-      ],
-      "@shared/*": [
-        "src/app/shared/*"
-      ],
-      "@features/*": [
-        "src/app/features/*"
-      ],
-      "@entities/*": [
-        "src/app/entities/*"
-      ],
-      "@pages/*": [
-        "src/app/pages/*"
-      ],
-      "@widgets/*": [
-        "src/app/widgets/*"
-      ],
-      "@spartan-ng/helm/button": [
-        "./shared/ui/button/src/index.ts"
-      ],
-      "@spartan-ng/helm/utils": [
-        "./shared/ui/utils/src/index.ts"
-      ],
-      "@spartan-ng/ui-button-helm": [
-        ".\\shared/ui/ui-button-helm/src/index.ts"
+      "@app/*": ["src/app/*"],
+      "@core/*": ["src/app/core/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@features/*": ["src/app/features/*"],
+      "@entities/*": ["src/app/entities/*"],
+      "@pages/*": ["src/app/pages/*"],
+      "@widgets/*": ["src/app/widgets/*"],
+      "@spartan-ng/helm/button": ["./shared/ui/button/src/index.ts"],
+      "@spartan-ng/helm/utils": ["./shared/ui/utils/src/index.ts"],
+      "@spartan-ng/ui-icon-helm": [
+        "src/app/shared/ui/ui-icon-helm/src/index.ts"
       ]
     }
   },
