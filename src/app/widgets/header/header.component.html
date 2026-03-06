@@ -1,24 +1,52 @@
 <header
-  class="flex-row top-0 z-50 w-full bg-primary border-b-2 border-primary-foreground/20 items-center justify-between backdrop-blur-md h-16 flex text-primary-foreground"
->
-  <div class="flex flex-row p-10 gap-10 items-center">
-    <h1>Valéria Lima</h1>
-    <button
-      app-button
-      variant="outline"
-      size="icon"
-      (click)="themeService.toggleTheme()"
-    >
-      <lucide-icon [img]="themeService.darkmode() ? Moon : Sun"></lucide-icon>
-    </button>
+  class="sticky top-0 z-50 w-full border-b-2 border-primary-foreground/20 bg-primary backdrop-blur-md text-primary-foreground">
+  <div class="container mx-auto px-4 md:px-10 h-16 flex items-center justify-between">
+
+  
+    <h1 class="font-serif font-bold text-lg md:text-xl">Valéria Lima</h1>
+
+
+    <nav class="hidden md:flex items-center gap-4">
+      <a href="#sobre" app-button variant="ghost">Sobre</a>
+      <a href="#abordagem" app-button variant="ghost">Abordagem</a>
+      <a href="#contato" app-button variant="ghost">Contato</a>
+      <a href="#agendar" app-button variant="outline">Agendar</a>
+
+      <button app-button variant="ghost" size="icon" (click)="themeService.toggleTheme()">
+        <lucide-icon [img]="themeService.darkmode() ? Moon : Sun" class="h-[1.2rem] w-[1.2rem]"></lucide-icon>
+      </button>
+    </nav>
+
+
+    <div class="flex items-center gap-1 md:hidden">
+      <button app-button variant="ghost" size="icon" (click)="themeService.toggleTheme()">
+        <lucide-icon [img]="themeService.darkmode() ? Moon : Sun" class="h-[1.2rem] w-[1.2rem]"></lucide-icon>
+      </button>
+
+      <button app-button variant="ghost" size="icon" (click)="toggleMenu()">
+        <lucide-icon [img]="isMobileMenuOpen() ? CloseIcon : MenuIcon" class="h-[1.2rem] w-[1.2rem]"></lucide-icon>
+      </button>
+    </div>
   </div>
 
-  <nav class="justify-items-end p-10">
-    <ul class=" flex-row flex gap-5 ">
-      <li><a href="" app-button variant="ghost">Sobre</a></li>
-      <li><a href="" app-button variant="ghost">Abordagem</a></li>
-      <li><a href="" app-button variant="ghost">Contato</a></li>
-      <li><a href="" app-button variant="ghost">Agendar</a></li>
-    </ul>
-  </nav>
 </header>
+
+
+@if (isMobileMenuOpen()) {
+  <div class="md:hidden bg-primary border-b-2 border-primary px-4 pb-4 justify-items-center text-primary-foreground">
+    <nav class="flex flex-col space-y-1">
+      <a href="#sobre" (click)="toggleMenu()" app-button variant="ghost" class="w-full">
+        Sobre
+      </a>
+      <a href="#abordagem" (click)="toggleMenu()" app-button variant="ghost" class="w-full">
+        Abordagem
+      </a>
+      <a href="#contato" (click)="toggleMenu()" app-button variant="ghost" class="w-full">
+        Contato
+      </a>
+      <a href="#agendar" (click)="toggleMenu()" app-button variant="outline" class="w-full justify-center mt-2">
+        Agendar Consulta
+      </a>
+    </nav>
+  </div>
+}
