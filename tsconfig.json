@@ -28,7 +28,8 @@
       "@spartan-ng/helm/utils": ["./shared/ui/utils/src/index.ts"],
       "@spartan-ng/ui-icon-helm": [
         "src/app/shared/ui/ui-icon-helm/src/index.ts"
-      ]
+      ],
+      "@spartan-ng/helm/sheet": ["src/app/shared/ui/ui-sheet-helm/src/index.ts"]
     }
   },
   "angularCompilerOptions": {
