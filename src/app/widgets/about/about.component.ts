@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { lucideHeart } from '@ng-icons/lucide';
+import { lucideHeart,lucideMedal} from '@ng-icons/lucide';
 import { HlmIconComponent, provideIcons } from '@spartan-ng/ui-icon-helm';
 
 
@@ -7,7 +7,7 @@ import { HlmIconComponent, provideIcons } from '@spartan-ng/ui-icon-helm';
   selector: 'app-about',
   standalone: true,
   imports: [ HlmIconComponent,],
-  providers:[provideIcons({lucideHeart})],
+  providers:[provideIcons({lucideHeart,lucideMedal})],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
