@@ -34,43 +34,25 @@
       <aside
         class="about-aside grid gap-4 rounded-3xl border border-border bg-card p-6 text-card-foreground shadow-sm"
       >
-        <div class="flex flex-row items-center rounded-2xl bg-muted p-5">
-          <div
-            class="flex border border-border items-center p-3 bg-white rounded-xl shadow-md mr-10"
-          >
-            <hlm-icon hlm name="lucideMedal" />
-          </div>
-          <div class="flex flex-col">
-            <h3
-              class="text-sm font-semibold uppercase tracking-wide text-foreground"
+        @for (item of highlights; track item.title) {
+          <div class="flex flex-row items-center rounded-2xl bg-muted p-5">
+            <div
+              class="flex border border-border items-center p-3 bg-white rounded-xl shadow-md mr-10"
             >
-              Formação
-            </h3>
-            <p class="mt-2 text-sm leading-6 text-muted-foreground">
-              Psicologia pela UNINOVE, com especialização em Psicanálise
-              Clínica.
-            </p>
+              <hlm-icon hlm [name]="item.icon" />
+            </div>
+            <div class="flex flex-col">
+              <h3
+                class="text-sm font-semibold uppercase tracking-wide text-foreground"
+              >
+                {{ item.title }}
+              </h3>
+              <p class="mt-2 text-sm leading-6 text-muted-foreground">
+                {{ item.description }}
+              </p>
+            </div>
           </div>
-        </div>
-
-        <div class="flex flex-row rounded-2xl bg-muted p-5 items-center">
-          <div
-            class="flex border border-border items-center p-3 bg-white rounded-xl shadow-md mr-10"
-          >
-            <hlm-icon hlm name="lucideHeart" />
-          </div>
-
-          <div class="flex flex-col">
-            <h3
-              class="text-sm font-semibold uppercase tracking-wide text-foreground"
-            >
-              Abordagem
-            </h3>
-            <p class="mt-2 text-sm leading-6 text-muted-foreground">
-              Atendimento humanizado focado no desenvolvimento emocional.
-            </p>
-          </div>
-        </div>
+        }
       </aside>
     </div>
   </div>

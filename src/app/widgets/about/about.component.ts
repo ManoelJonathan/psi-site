@@ -1,6 +1,7 @@
 import { afterNextRender, Component, DestroyRef, ElementRef, inject, viewChild } from '@angular/core';
 import { lucideHeart, lucideMedal } from '@ng-icons/lucide';
 import { HlmIconComponent, provideIcons } from '@spartan-ng/ui-icon-helm';
+import { aboutHighlights } from './model/about-highlights.data';
 
 @Component({
   selector: 'app-about',
@@ -13,6 +14,8 @@ import { HlmIconComponent, provideIcons } from '@spartan-ng/ui-icon-helm';
 export class AboutComponent {
   private sectionRef = viewChild<ElementRef>('aboutSection');
   private destroyRef = inject(DestroyRef);
+
+  protected highlights = aboutHighlights;
 
   constructor() {
     afterNextRender(() => {

@@ -68,4 +68,5 @@ html, body {
     font-family: 'Inter', sans-serif;
     @apply bg-background;
     scroll-padding-top: 4rem;
+    overflow-x: hidden;
 }

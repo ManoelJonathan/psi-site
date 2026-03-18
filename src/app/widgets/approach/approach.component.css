@@ -1,0 +1,34 @@
+.approach-header,
+.approach-text,
+.approach-card {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.approach-header {
+  transform: translateY(30px);
+}
+
+.approach-text {
+  transform: translateY(30px);
+  transition-delay: 0.2s;
+}
+
+.approach-card {
+  transform: translateY(40px);
+}
+
+/* Delay escalonado para os cards (efeito cascata) */
+.approach-card:nth-child(1) { transition-delay: 0.4s; }
+.approach-card:nth-child(2) { transition-delay: 0.5s; }
+.approach-card:nth-child(3) { transition-delay: 0.6s; }
+.approach-card:nth-child(4) { transition-delay: 0.7s; }
+
+/* Classe ativadora */
+.revealed .approach-header,
+.revealed .approach-text,
+.revealed .approach-card {
+  opacity: 1;
+  transform: none;
+}

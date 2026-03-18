@@ -1,9 +1,10 @@
 <section
   id="approach"
-  class="relative min-h-[90vh] flex flex-col items-center bg-background gap-20"
+  #approachSection
+  class="relative min-h-[90vh] flex flex-col items-center bg-background gap-20 overflow-hidden"
 >
   <div class="flex-col flex px-4 space-y-5 w-full items-center pt-10">
-    <div class=" flex flex-col space-y-3 items-center">
+    <div class="approach-header flex flex-col space-y-3 items-center">
       <h2
         class="text-3xl md:text-4xl font-serif leading-tight tracking-[0.2em] text-primary-foreground/80"
       >
@@ -12,7 +13,7 @@
       <div class="mb-2 h-1 w-20 rounded-full bg-primary-foreground"></div>
     </div>
 
-    <p class="text-center max-w-4xl">
+    <p class="approach-text text-center max-w-4xl">
       A psicanálise é um método terapêutico que busca compreender o
       funcionamento da mente humana através da investigação do inconsciente.É um
       convite para falar livremente sobre o que lhe aflige, permitindo que novos
@@ -23,7 +24,7 @@
   <div class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-10 mb-10">
     @for (card of cards; track card.title) {
       <div
-        class="group flex flex-col w-[27rem] sm:w-[18rem] bg-white rounded-xl hover:bg-gray-100 transition-colors duration-300 items-start p-5 shadow-md"
+        class="approach-card group flex flex-col w-[27rem] sm:w-[18rem] bg-white rounded-xl hover:bg-gray-100 transition-colors duration-300 items-start p-5 shadow-md"
       >
         <div
           class="w-12 h-12 bg-white border border-primary-foreground/20 rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300"

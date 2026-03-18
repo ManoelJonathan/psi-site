@@ -4,11 +4,15 @@
 .hero-text,
 .hero-buttons {
   opacity: 0;
+  will-change: opacity, transform;
   transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
 .hero-image {
   transform: scale(0.92);
+  /* Fix para evitar overflow em alguns navegadores durante renderização */
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 
 .hero-title {
