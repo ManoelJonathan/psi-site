@@ -1,10 +1,12 @@
 <header
-  class="fixed top-0 z-[1001] w-full border-b-2 border-primary-foreground/20 bg-primary backdrop-blur-md text-primary-foreground">
-  <div class="container mx-auto px-4 md:px-10 h-16 flex items-center justify-between">
-
-  
-    <h1 class="font-serif font-bold text-lg md:text-xl">Valéria Lima</h1>
-
+  class="fixed top-0 z-[1001] w-full border-b-2 border-primary-foreground/20 bg-primary backdrop-blur-md text-primary-foreground"
+>
+  <div
+    class="container mx-auto px-4 md:px-10 h-16 flex items-center justify-between"
+  >
+    <a href="#hero">
+      <h1 class="font-serif font-bold text-lg md:text-xl">Valéria Lima</h1>
+    </a>
 
     <nav class="hidden md:flex items-center gap-4">
       <a href="#about" app-button variant="ghost">Sobre</a>
@@ -12,15 +14,30 @@
       <a href="#contact" app-button variant="ghost">Contato</a>
       <a href="#agendar" app-button variant="outline">Agendar</a>
 
-      <button app-button variant="ghost" size="icon" (click)="themeService.toggleTheme()">
-        <hlm-icon [name]="themeService.darkmode() ? 'lucideMoon' : 'lucideSun'" class="h-[1.2rem] w-[1.2rem]"></hlm-icon>
+      <button
+        app-button
+        variant="ghost"
+        size="icon"
+        (click)="themeService.toggleTheme()"
+      >
+        <hlm-icon
+          [name]="themeService.darkmode() ? 'lucideMoon' : 'lucideSun'"
+          class="h-[1.2rem] w-[1.2rem]"
+        ></hlm-icon>
       </button>
     </nav>
 
-
     <div class="flex items-center gap-1 md:hidden">
-      <button app-button variant="ghost" size="icon" (click)="themeService.toggleTheme()">
-        <hlm-icon [name]="themeService.darkmode() ? 'lucideMoon' : 'lucideSun'" class="h-[1.2rem] w-[1.2rem]"></hlm-icon>
+      <button
+        app-button
+        variant="ghost"
+        size="icon"
+        (click)="themeService.toggleTheme()"
+      >
+        <hlm-icon
+          [name]="themeService.darkmode() ? 'lucideMoon' : 'lucideSun'"
+          class="h-[1.2rem] w-[1.2rem]"
+        ></hlm-icon>
       </button>
 
       <hlm-sheet side="bottom" [closeDelay]="100">
@@ -28,18 +45,45 @@
           <hlm-icon name="lucideMenu" class="h-[1.2rem] w-[1.2rem]"></hlm-icon>
         </button>
 
-        <hlm-sheet-content *brnSheetContent class="bg-primary h-[35vh] text-primary-foreground border-primary-foreground/20 top-16">
+        <hlm-sheet-content
+          *brnSheetContent
+          class="bg-primary h-[35vh] text-primary-foreground border-primary-foreground/20 top-16"
+        >
           <nav class="flex flex-col px-4 pb-4 gap-2">
-            <a href="#about" brnSheetClose app-button variant="outline" class="w-full justify-center">
+            <a
+              href="#about"
+              brnSheetClose
+              app-button
+              variant="outline"
+              class="w-full justify-center"
+            >
               Sobre
             </a>
-            <a href="#approach" brnSheetClose app-button variant="outline" class="w-full justify-center">
+            <a
+              href="#approach"
+              brnSheetClose
+              app-button
+              variant="outline"
+              class="w-full justify-center"
+            >
               Abordagem
             </a>
-            <a href="#contact" brnSheetClose app-button variant="outline" class="w-full justify-center">
+            <a
+              href="#contact"
+              brnSheetClose
+              app-button
+              variant="outline"
+              class="w-full justify-center"
+            >
               Contato
             </a>
-            <a href="#agendar" brnSheetClose app-button variant="outline" class="w-full justify-center">
+            <a
+              href="#agendar"
+              brnSheetClose
+              app-button
+              variant="outline"
+              class="w-full justify-center"
+            >
               Agendar Consulta
             </a>
           </nav>
