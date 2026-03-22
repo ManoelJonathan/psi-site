@@ -22,6 +22,10 @@ module.exports = {
           DEFAULT: "color-mix(in srgb, var(--secondary) calc(100% * <alpha-value>), transparent)",
           foreground: "color-mix(in srgb, var(--secondary-foreground) calc(100% * <alpha-value>), transparent)",
         },
+        third: {
+          DEFAULT: "color-mix(in srgb, var(--third) calc(100% * <alpha-value>), transparent)",
+          foreground: "color-mix(in srgb, var(--third-foreground) calc(100% * <alpha-value>), transparent)",
+        },
         destructive: {
           DEFAULT: "color-mix(in srgb, var(--destructive) calc(100% * <alpha-value>), transparent)",
           foreground: "color-mix(in srgb, var(--destructive-foreground) calc(100% * <alpha-value>), transparent)",
