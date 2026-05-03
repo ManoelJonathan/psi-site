@@ -21,21 +21,19 @@
     </p>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-10 mb-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-10 mb-10 px-4 relative z-10">
     @for (card of cards; track card.title) {
-      <div
-        class="approach-card group flex flex-col w-[27rem] sm:w-[18rem] bg-white rounded-xl hover:bg-gray-100 transition-colors duration-300 items-start p-5 shadow-md"
-      >
-        <div
-          class="w-12 h-12 bg-white border border-primary-foreground/20 rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300"
-        >
+      <div class="approach-card group flex flex-col w-full sm:w-[21rem] items-start relative overflow-hidden bg-card_second/80 glass-panel rounded-[2.5rem] p-8 hover:shadow-[0_20px_50px_rgba(var(--primary),0.1)] transition-all duration-500">
+        <div class="absolute top-0 right-0 p-4 text-primary opacity-3 group-hover:opacity-20 transition-opacity">
+          <hlm-icon [name]="card.icon" size="xl" class="scale-[2.5] transform -rotate-12"></hlm-icon>
+        </div>
+        <div class="w-14 h-14 bg-primary text-primary-foreground rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
           <hlm-icon [name]="card.icon" size="sm"></hlm-icon>
         </div>
-
-        <h3 class="text-xl font-bold text-black mb-3">
+        <h3 class="text-2xl font-serif text-card_second-foreground mb-4">
           {{ card.title }}
         </h3>
-        <p class="text-gray-600 leading-relaxed text-sm">
+        <p class="text-card_second-foreground leading-relaxed text-sm">
           {{ card.description }}
         </p>
       </div>

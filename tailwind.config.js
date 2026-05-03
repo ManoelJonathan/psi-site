@@ -46,6 +46,10 @@ module.exports = {
           DEFAULT: "color-mix(in srgb, var(--card) calc(100% * <alpha-value>), transparent)",
           foreground: "color-mix(in srgb, var(--card-foreground) calc(100% * <alpha-value>), transparent)",
         },
+        card_second: {
+          DEFAULT: "color-mix(in srgb, var(--card_second) calc(100% * <alpha-value>), transparent)",
+          foreground: "color-mix(in srgb, var(--card_second-foreground) calc(100% * <alpha-value>), transparent)",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
