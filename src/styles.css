@@ -90,3 +90,36 @@ html, body {
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-secondary/60;
 }
+
+/* Animações Orgânicas e Estilos Premium */
+@keyframes blob-bounce {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.15); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+.animate-blob {
+  animation: blob-bounce 20s infinite alternate ease-in-out;
+}
+
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-4000 { animation-delay: 4s; }
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.glass-panel {
+  @apply bg-card/40 backdrop-blur-xl border border-white/10;
+}
+
+.dark .glass-panel {
+  @apply bg-black/20 border border-white/5;
+}
+
+/* Revelação Suave Customizada */
+.revealed {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
